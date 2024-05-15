@@ -1,0 +1,145 @@
+[
+    {
+        "Fund Name": "NASDAQ Cybersecurity UCITS ETF",
+        "Primary Ticker": "CBRS",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "EUR",
+        "ISIN": "IE00BF16M727",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Global",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "Cloud Computing UCITS ETF",
+        "Primary Ticker": "SKYE",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "GBP",
+        "ISIN": "IE00BFD2H405",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Global",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "Nasdaq® Clean Edge® Green Energy UCITS ETF",
+        "Primary Ticker": "QCLN",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "Eur",
+        "ISIN": "IE00BDBRT036",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Global",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "Indxx Innovative Transaction & Process UCITS ETF",
+        "Primary Ticker": "BLOK",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "Eur",
+        "ISIN": "IE00BF5DXP42",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Global",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "Dow Jones Internet UCITS ETF",
+        "Primary Ticker": "FDNE",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "EUR",
+        "ISIN": "IE00BG0SSC32",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "United States",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "Dow Jones International Internet UCITS ETF",
+        "Primary Ticker": "FDNI",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "EUR",
+        "ISIN": "IE00BT9PVG14",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Global",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "NYSE Arca Biotechnology UCITS ETF",
+        "Primary Ticker": "FBT",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "USD",
+        "ISIN": "IE00BL0L0H60",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Developed",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "IPOX® Europe Equity Opportunities UCITS ETF",
+        "Primary Ticker": "EFPX",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "EUR",
+        "ISIN": "IE00BFD26097",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "Europe",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "US Equity Opportunities UCITS ETF",
+        "Primary Ticker": "FPXU",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "USD",
+        "ISIN": "IE00BYTH6238",
+        "Strategy": "Thematic",
+        "Asset Class": "Equity",
+        "Region": "United States",
+        "Style": "Active"
+    },
+    {
+        "Fund Name": "FactorFX UCITS ETF",
+        "Primary Ticker": "FXEU",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "EUR (H)",
+        "ISIN": "IE00BD5HBS12",
+        "Strategy": "Fixed Income",
+        "Asset Class": "Fixed Income",
+        "Region": "Global",
+        "Style": "Index"
+    },
+    {
+        "Fund Name": "FactorFX UCITS ETF",
+        "Primary Ticker": "FTFX",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "USD",
+        "ISIN": "IE00BD5HBQ97",
+        "Strategy": "Fixed Income",
+        "Asset Class": "Fixed Income",
+        "Region": "Global",
+        "Style": "Index"
+    },
+    {
+        "Fund Name": "FactorFX UCITS ETF",
+        "Primary Ticker": "FXGB",
+        "Income Treatment": "Acc",
+        "Share Class Currency": "GBP (H)",
+        "ISIN": "IE00BD5HBR05",
+        "Strategy": "Fixed Income",
+        "Asset Class": "Fixed Income",
+        "Region": "Global",
+        "Style": "Index"
+    },
+    {
+        "Fund Name": "Low Duration Global Government Bond UCITS ETF",
+        "Primary Ticker": "FSOV",
+        "Income Treatment": "Dist",
+        "Share Class Currency": "EUR",
+        "ISIN": "IE00BKS2X317",
+        "Strategy": "Fixed Income",
+        "Asset Class": "Fixed Income",
+        "Region": "Global",
+        "Style": "Index"
+    }
+]
