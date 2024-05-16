@@ -1,6 +1,10 @@
 export const filters = {
     "Strategy": ['Thematic', 'Factors', 'Equity Income', 'Capital Strength', 'Currency Hedge', 'ESG'],
     "AssetClass": {
+        "Equity": ['All Cap', 'Large Cap', 'Small Cap'],
+        "Fixed Income": ['Government', 'Currency']
+    },
+    "Market & Region": {
         "Market": ['Developed', 'Emerging'],
         "Region": {
             "Asia Pacific": [],
@@ -9,6 +13,5 @@ export const filters = {
             "North America": ["United States"]
         }
     },
-    "Market & Region": ['Developed', 'Emerging'],
     "Style": ['Index', 'Active']
 };
