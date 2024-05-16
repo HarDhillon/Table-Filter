@@ -9,7 +9,7 @@ export default function Table({ data }) {
     const currentFilters = useFilters()
     const filteredData = filterData(data, currentFilters)
 
-    const keys = Object.keys(filteredData[0])
+    const keys = Object.keys(data[0])
     const firstKeys = keys.slice(0, 4);
     const remainingKeys = keys.slice(4);
 

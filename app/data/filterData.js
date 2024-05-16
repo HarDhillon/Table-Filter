@@ -1,6 +1,6 @@
 export const filters = {
     "Strategy": ['Thematic', 'Factors', 'Equity Income', 'Capital Strength', 'Currency Hedge', 'ESG'],
-    "AssetClass": {
+    "Asset Class": {
         "Equity": ['All Cap', 'Large Cap', 'Small Cap'],
         "Fixed Income": ['Government', 'Currency']
     },

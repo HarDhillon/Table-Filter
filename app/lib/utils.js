@@ -2,6 +2,9 @@ import Checkbox from '../components/checkbox'
 
 export const buildCheckBoxes = (filterValues, tableColumn) => {
     // If just an array we can simply return
+    if (tableColumn === "Market & Region") {
+        tableColumn = "Region"
+    }
     if (Array.isArray(filterValues)) {
         return filterValues.map((filterName, index) => {
             return (
@@ -13,7 +16,7 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
         return Object.entries(filterValues).map(([key, value]) => {
             // If value at top level is array
             if (Array.isArray(value)) {
-                const items = value.map((item, index) => <Checkbox label={item} key={index}></Checkbox>)
+                const items = value.map((item, index) => <Checkbox tableColumn={tableColumn} label={item} key={index}></Checkbox>)
                 return (
                     <div className='mb-4 last:mb-0' key={key}>
                         <h2 className='text-[#003057] font-bold'>{key}</h2>
@@ -54,5 +57,18 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
 }
 
 export const filterData = (data, filters) => {
-    return data
+    const filteredData = data.filter(item => {
+        // Iterate through each key in the filter
+        for (let key in filters) {
+            // Check if the key exists in the item and if the value is not in the filter array
+            if (item[key] && !filters[key].includes(item[key])) {
+                // Exclude the item if any criteria fail
+                return false;
+            }
+        }
+        // Include the item if all criteria pass
+        return true;
+    });
+
+    return filteredData
 }
