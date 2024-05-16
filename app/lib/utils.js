@@ -1,11 +1,11 @@
 import Checkbox from '../components/checkbox'
 
-export const buildCheckBoxes = (filterValues) => {
+export const buildCheckBoxes = (filterValues, tableColumn) => {
     // If just an array we can simply return
     if (Array.isArray(filterValues)) {
         return filterValues.map((filterName, index) => {
             return (
-                <Checkbox label={filterName} key={index}></Checkbox>
+                <Checkbox tableColumn={tableColumn} label={filterName} key={index}></Checkbox>
             )
         })
         // Otherwise we need to build titles and sub-boxes 
@@ -36,10 +36,10 @@ export const buildCheckBoxes = (filterValues) => {
                             )
                         })
                         return (
-                            <Checkbox label={key} key={key}>{childCheckBoxes}</Checkbox>
+                            <Checkbox tableColumn={tableColumn} label={key} key={key}>{childCheckBoxes}</Checkbox>
                         )
                     } else {
-                        return <Checkbox label={key} key={key}></Checkbox>
+                        return <Checkbox tableColumn={tableColumn} label={key} key={key}></Checkbox>
                     }
                 })
                 return (

@@ -11,7 +11,7 @@ export default async function Home() {
 
   // Our MultiSelect is built dynamically based on number of filters.
   const renderedMultiSelects = Object.entries(filters).map(([filterKey, filterValues]) => {
-    return <MultiSelect key={filterKey} filterValues={filterValues}>{filterKey}</MultiSelect>
+    return <MultiSelect key={filterKey} tableColumn={filterKey} filterValues={filterValues}>{filterKey}</MultiSelect>
   })
 
   return (

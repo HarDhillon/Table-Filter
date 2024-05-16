@@ -10,9 +10,46 @@ const initialFilters = {}
 
 function filtersReducer(filters, action) {
     switch (action.type) {
-        case '': {
-            return { ...filters }
+        case 'add': {
+            const obj = action.payload
+            const key = Object.keys(obj)[0]
+            const value = obj[key]
+
+            // If filter key already exists, add to the array
+            if (filters[key]) {
+                return {
+                    ...filters,
+                    [key]: [...filters[key], value]
+                }
+            } else {
+                return { ...filters, [key]: [value] }
+            }
+
         }
+
+        case 'remove': {
+            const obj = action.payload
+            const key = Object.keys(obj)[0]
+            const value = obj[key]
+
+            if (filters[key]) {
+                const updatedArray = filters[key].filter(item => item !== value);
+
+                if (updatedArray.length !== filters[key].length) {
+                    // If item was removed, update the state
+                    const newState = {
+                        ...filters,
+                        [key]: updatedArray
+                    };
+                    // Check if the array length becomes 0, remove the key from the state
+                    if (updatedArray.length === 0) {
+                        delete newState[key];
+                    }
+                    return newState;
+                }
+            }
+        }
+
         default: {
             return filters
         }
