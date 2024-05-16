@@ -4,6 +4,7 @@ import { fetchData } from "./lib/actions";
 import { filters } from "./data/filterData";
 import FilterTable from "./components/filter-table";
 import { Suspense } from "react";
+import Search from "./components/search";
 
 export default async function Home() {
 
@@ -17,8 +18,11 @@ export default async function Home() {
   return (
     <FilterTable>
       <main className="flex min-h-screen flex-col p-24">
-        <div className="flex space-x-8">
-          {renderedMultiSelects}
+        <div className="mb-12 w-fit">
+          <Search></Search>
+          <div className="flex space-x-8 w-fit">
+            {renderedMultiSelects}
+          </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <Table data={data}></Table>

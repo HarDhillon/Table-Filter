@@ -59,9 +59,9 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
 export const filterData = (data, filters) => {
     const filteredData = data.filter(item => {
         // Iterate through each key in the filter
-        for (let key in filters) {
+        for (let key in filters.boxFilter) {
             // Check if the key exists in the item and if the value is not in the filter array
-            if (item[key] && !filters[key].includes(item[key])) {
+            if (item[key] && !filters.boxFilter[key].includes(item[key])) {
                 // Exclude the item if any criteria fail
                 return false;
             }

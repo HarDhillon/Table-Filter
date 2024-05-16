@@ -9,7 +9,7 @@ export default function Checkbox({ label, tableColumn, children }) {
     const handleChange = () => {
         setIsTicked(prevIsTicked => !prevIsTicked)
         dispatch({
-            type: isTicked ? 'remove' : 'add', // Use the current value of isTicked
+            type: isTicked ? 'remove-box' : 'add-box', // Use the current value of isTicked
             payload: {
                 [tableColumn]: label
             }

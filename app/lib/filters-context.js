@@ -6,48 +6,72 @@ const FiltersDispatchContext = createContext();
 const FiltersContext = createContext();
 
 
-const initialFilters = {}
+// todo change our initialFilters to use below objects
+const initialFilters = {
+    searchFilter: {
+
+    },
+    boxFilter: {
+
+    }
+}
 
 function filtersReducer(filters, action) {
     switch (action.type) {
-        case 'add': {
+        case 'add-box': {
             const obj = action.payload
             const key = Object.keys(obj)[0]
             const value = obj[key]
 
             // If filter key already exists, add to the array
-            if (filters[key]) {
+            if (filters.boxFilter[key]) {
                 return {
                     ...filters,
-                    [key]: [...filters[key], value]
+                    boxFilter: {
+                        ...filters.boxFilter,
+                        [key]: [...filters.boxFilter[key], value]
+                    }
                 }
             } else {
-                return { ...filters, [key]: [value] }
+                return {
+                    ...filters,
+                    boxFilter: {
+                        [key]: [value]
+
+                    }
+                }
             }
 
         }
 
-        case 'remove': {
+        case 'remove-box': {
             const obj = action.payload
             const key = Object.keys(obj)[0]
             const value = obj[key]
 
-            if (filters[key]) {
-                const updatedArray = filters[key].filter(item => item !== value);
+            if (filters.boxFilter[key]) {
+                const updatedArray = filters.boxFilter[key].filter(item => item !== value);
 
-                if (updatedArray.length !== filters[key].length) {
+                if (updatedArray.length !== filters.boxFilter[key].length) {
                     // If item was removed, update the state
                     const newState = {
                         ...filters,
-                        [key]: updatedArray
+                        boxFilter: {
+                            [key]: updatedArray
+
+                        }
                     };
                     // Check if the array length becomes 0, remove the key from the state
                     if (updatedArray.length === 0) {
-                        delete newState[key];
+                        delete newState.boxFilter[key];
                     }
                     return newState;
                 }
             }
+        }
+
+        case 'add-search': {
+
         }
 
         default: {
