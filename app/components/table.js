@@ -16,12 +16,12 @@ export default function Table({ data }) {
 
 
     return (
-        <table>
+        <table className='table-fixed'>
             <thead>
                 <tr className='text-left'>
                     {/* Get an array of our first set of keys and map over them */}
                     {firstKeys.map((entry, index) => (
-                        <th className='text-white bg-hugu-light-blue p-3 font-normal' key={index}>{entry}</th>
+                        <th className='text-white bg-hugu-light-blue p-3' key={index}>{entry}</th>
                     ))}
 
                     {/* Get an array of our remaining keys and map over them */}

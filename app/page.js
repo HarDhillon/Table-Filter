@@ -16,9 +16,11 @@ export default async function Home() {
   })
 
   return (
-    <FilterTable>
-      <main className="flex min-h-screen flex-col p-24">
-        <div className="mb-12 w-fit">
+    <main className="flex min-h-screen flex-col p-24 bg-[#F8F9FA]">
+
+      <h1 className="mb-10 text-3xl font-semibold text-[#003057]">Product Finder</h1>
+      <FilterTable>
+        <div className="mb-12 w-fit min-w-[50%]">
           <Search></Search>
           <div className="flex space-x-8 w-fit">
             {renderedMultiSelects}
@@ -27,7 +29,8 @@ export default async function Home() {
         <Suspense fallback={<div>Loading...</div>}>
           <Table data={data}></Table>
         </Suspense>
-      </main>
-    </FilterTable>
+      </FilterTable>
+    </main>
+
   );
 }

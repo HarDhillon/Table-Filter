@@ -67,7 +67,7 @@ export default function Checkbox({ label, tableColumn, childrenLabels }) {
 
     return (
         <div className='p-1'>
-            <label>
+            <label className='text-sm'>
                 <input
                     className='mr-2'
                     onChange={handleChange}
