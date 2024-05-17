@@ -8,9 +8,7 @@ const FiltersContext = createContext();
 
 // todo change our initialFilters to use below objects
 const initialFilters = {
-    searchFilter: {
-
-    },
+    searchFilter: '',
     boxFilter: {
 
     }
@@ -70,8 +68,11 @@ function filtersReducer(filters, action) {
             }
         }
 
-        case 'add-search': {
-
+        case 'search': {
+            return {
+                ...filters,
+                searchFilter: action.payload
+            }
         }
 
         default: {

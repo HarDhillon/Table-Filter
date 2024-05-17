@@ -57,7 +57,19 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
 }
 
 export const filterData = (data, filters) => {
-    const filteredData = data.filter(item => {
+
+    const searchParams = filters.searchFilter.toLowerCase()
+
+    // Filter through our search first
+    const searchFilteredData = data.filter(item => {
+        const fundName = item["Fund Name"].toLowerCase()
+        if (fundName.indexOf(searchParams) > -1) {
+            return true
+        }
+    })
+
+    // Then filter check boxes
+    const filteredData = searchFilteredData.filter(item => {
         // Iterate through each key in the filter
         for (let key in filters.boxFilter) {
             // Check if the key exists in the item and if the value is not in the filter array
