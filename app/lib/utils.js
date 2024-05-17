@@ -1,5 +1,6 @@
 import Checkbox from '../components/checkbox'
 
+// NB: This needs to be refactored
 export const buildCheckBoxes = (filterValues, tableColumn) => {
     // If just an array we can simply return
     if (tableColumn === "Market & Region") {
@@ -19,7 +20,7 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
                 const items = value.map((item, index) => <Checkbox tableColumn={tableColumn} label={item} key={index}></Checkbox>)
                 return (
                     <div className='mb-4 last:mb-0' key={key}>
-                        <h2 className='text-[#003057] font-bold'>{key}</h2>
+                        <h2 className='mb-1 text-[#003057] font-bold'>{key}</h2>
                         {items}
                     </div>
                 )
@@ -28,18 +29,11 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
                 // Within, check if there child tick boxes
                 const items = Object.entries(value).map(([key, value]) => {
                     if (value.length > 0) {
-                        const childCheckBoxes = value.map(childLabel => {
-                            return (
-                                <div key={childLabel} className='p-1'>
-                                    <label>
-                                        <input className='mr-2' type='checkbox' />
-                                        {childLabel}
-                                    </label>
-                                </div>
-                            )
+                        const childrenLabels = value.map(childLabel => {
+                            return childLabel
                         })
                         return (
-                            <Checkbox tableColumn={tableColumn} label={key} key={key}>{childCheckBoxes}</Checkbox>
+                            <Checkbox tableColumn={tableColumn} label={key} key={key} childrenLabels={childrenLabels}></Checkbox>
                         )
                     } else {
                         return <Checkbox tableColumn={tableColumn} label={key} key={key}></Checkbox>
@@ -47,7 +41,7 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
                 })
                 return (
                     <div className='mb-4 last:mb-0' key={key}>
-                        <h2 className='text-[#003057] font-bold'>{key}</h2>
+                        <h2 className='mb-1 text-[#003057] font-bold'>{key}</h2>
                         {items}
                     </div>
                 )
@@ -58,6 +52,7 @@ export const buildCheckBoxes = (filterValues, tableColumn) => {
 
 export const filterData = (data, filters) => {
 
+    console.log(filters)
     const searchParams = filters.searchFilter.toLowerCase()
 
     // Filter through our search first
